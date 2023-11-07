@@ -20,7 +20,7 @@ const Experience =()=> {
                 </div>
 
                 <div className="text-sm">
-                    Developed using HTML,CSS,Bootstrap,JavaScript
+                    Developed using HTML,CSS,Bootstrap,JavaScript,PHP
                 </div>
 
                 <div className="flex gap-3 text-sm">

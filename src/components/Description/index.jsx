@@ -1,6 +1,6 @@
-const Description = () => {
+const Description = ({description}) => {
     return(
-        <div></div>
+        <div className="text-sm">{description}</div>
     )
 }
 export default Description;

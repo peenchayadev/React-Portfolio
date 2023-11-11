@@ -20,7 +20,7 @@ const Header =()=>{
                   {data.caption}
               </div>
 
-              <div className='mt-3 pl-2'>
+              <div className='mt-3 pl-1'>
                 <a href={data.link} target='_blank'>
                   <span className='font-semibold rounded-lg bg-primary text-black py-2 px-4'>
                       {data.btnText}

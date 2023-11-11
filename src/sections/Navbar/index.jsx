@@ -3,15 +3,18 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 const Navbar =()=>{
     return(
-      <div className='flex flex-col gap-3 font-semibold'>
+      <div className='flex flex-col gap-3 font-semibold mt-6'>
+
           <div>
           <FontAwesomeIcon className='text-primaryUse mr-2' icon={faArrowAltCircleRight} />
             Education
-            </div>
+          </div>
+
           <div>
           <FontAwesomeIcon className='text-primaryUse mr-2' icon={faArrowAltCircleRight} />
             Experience
           </div>
+
           <div>
           <FontAwesomeIcon className='text-primaryUse mr-2' icon={faArrowAltCircleRight} />
             Technical Skill

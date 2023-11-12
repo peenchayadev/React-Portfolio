@@ -1,14 +1,14 @@
-import { faFacebook, faGithub } from "@fortawesome/free-brands-svg-icons";
-import { faEnvelope } from "@fortawesome/free-solid-svg-icons";
+import { faGithub, faLinkedin, faMedium } from "@fortawesome/free-brands-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
-const Contact =()=>{
-    return(
+const Contact = () => {
+    return (
         <div className='flex items-end gap-4 text-2xl'>
-                <FontAwesomeIcon className='hover:scale-125 hover:text-yellow-500 transition-all' icon={faGithub}/>
-                <FontAwesomeIcon className='hover:scale-125 hover:text-yellow-500 transition-all' icon={faFacebook}/>
-                <FontAwesomeIcon className='hover:scale-125 hover:text-yellow-500 transition-all' icon={faEnvelope}/>
-            </div>
+            <FontAwesomeIcon className='hover:scale-125 hover:text-primaryTitle transition-all' icon={faGithub} />
+            <FontAwesomeIcon className='hover:scale-125 hover:text-primaryTitle transition-all' icon={faMedium} />
+            <FontAwesomeIcon className='hover:scale-125 hover:text-primaryTitle transition-all' icon={faLinkedin} />
+        </div>
     )
 }
+
 export default Contact;

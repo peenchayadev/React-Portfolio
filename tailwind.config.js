@@ -7,12 +7,12 @@ export default {
   theme: {
     extend: {
       colors:{
-        primaryTitle: "#222831",
-        primaryContent: "#393E46",
-        primaryBase: "#00ADB5",
-        primary: "#EEEEEE",
-        primarybg: "#0F0F0F",
-        primaryUse: "#FFC436",
+        primaryTitle: "#127369",
+        primaryContent: "#4C5958",
+        primarySubcontent: "#b5cecb",
+        primaryBase: "#fdfdfd",
+        primaryAccent: "#10403B",
+        primaryBg: "#f6f6f6",
       }
     },
   },

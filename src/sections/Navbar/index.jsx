@@ -1,26 +1,45 @@
-import { faArrowAltCircleRight } from "@fortawesome/free-solid-svg-icons";
+import { faArrowRight } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { useState } from "react";
 
-const Navbar =()=>{
-    return(
-      <div className='flex flex-col gap-3 font-semibold mt-6'>
+const navs = [
+    { title: "Education", sectionId: "Education-section" },
+    { title: "Experience", sectionId: "Experience-section" },
+    { title: "Skill", sectionId: "Project-section" },
+    { title: "Article", sectionId: "Article-section" },
+]
 
-          <div>
-          <FontAwesomeIcon className='text-primaryUse mr-2' icon={faArrowAltCircleRight} />
-            Education
-          </div>
+const Navbar = ({ navBarItems, currentSection }) => {
+    const [isMouseEnter, setIsMouseEnter] = useState({});
 
-          <div>
-          <FontAwesomeIcon className='text-primaryUse mr-2' icon={faArrowAltCircleRight} />
-            Experience
-          </div>
+    const handleClick = (sectionId) => {
+        document.getElementById(sectionId).scrollIntoView({ behavior: "smooth" });
+    }
 
-          <div>
-          <FontAwesomeIcon className='text-primaryUse mr-2' icon={faArrowAltCircleRight} />
-            Technical Skill
-          </div>
-          
-      </div>
+    return (
+        <div className='hidden lg:flex flex-col font-semibold mt-7'
+        >
+            {
+                navBarItems.map((e, i) => (
+                    <div
+                        key={`nav-${e.sectionId}-${i}`}
+                        onClick={() => handleClick(e.sectionId)}
+                        onMouseEnter={() => setIsMouseEnter({ [e.title]: true })}
+                        onMouseLeave={() => setIsMouseEnter({ [e.title]: false })}
+                        className="cursor-pointer flex py-2"
+                    >
+                        <div>
+                            <FontAwesomeIcon
+
+                                className={`new-arrow ${currentSection === e.sectionId ? "text-primaryTitle" : isMouseEnter[e.title] ? "" : "hidden"}`} icon={faArrowRight}
+                            />
+                        </div>
+                        <div className={`${currentSection === e.sectionId || isMouseEnter[e.title] ? "translate-x-3" : ""} duration-500 ease-out`}>{e.title}</div>
+                    </div>
+                ))
+            }
+        </div>
     )
 }
+
 export default Navbar;
